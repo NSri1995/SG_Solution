@@ -1,0 +1,14 @@
+.footerText{
+   height: 100px;
+   padding-top: 20px;
+   text-align: center;
+}
+.addText{
+   color: red;
+   padding-top: 20px;
+}
+.socialText{
+   text-decoration: underline;
+   font-size: larger;
+   color: red;
+}

@@ -1,0 +1,11 @@
+.header{
+    text-align: center;
+  }
+  .titleHead{
+    font-size:xx-large;
+    font-weight:bolder;
+  }
+  .titleTail{
+   text-decoration: overline;
+   font-size: larger;
+  }
