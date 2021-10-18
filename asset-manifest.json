@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/SG_Solution/static/css/main.a1c3f5af.chunk.css",
+    "main.js": "/SG_Solution/static/js/main.1fbc92d9.chunk.js",
+    "main.js.map": "/SG_Solution/static/js/main.1fbc92d9.chunk.js.map",
+    "runtime-main.js": "/SG_Solution/static/js/runtime-main.fe1fe88d.js",
+    "runtime-main.js.map": "/SG_Solution/static/js/runtime-main.fe1fe88d.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/SG_Solution/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.8d479b4b.chunk.js": "/SG_Solution/static/js/2.8d479b4b.chunk.js",
+    "static/js/2.8d479b4b.chunk.js.map": "/SG_Solution/static/js/2.8d479b4b.chunk.js.map",
+    "static/js/3.3c1082ca.chunk.js": "/SG_Solution/static/js/3.3c1082ca.chunk.js",
+    "static/js/3.3c1082ca.chunk.js.map": "/SG_Solution/static/js/3.3c1082ca.chunk.js.map",
+    "index.html": "/SG_Solution/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/SG_Solution/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.a1c3f5af.chunk.css.map": "/SG_Solution/static/css/main.a1c3f5af.chunk.css.map",
+    "static/js/2.8d479b4b.chunk.js.LICENSE.txt": "/SG_Solution/static/js/2.8d479b4b.chunk.js.LICENSE.txt",
+    "static/media/Body.css": "/SG_Solution/static/media/paper.40dc2e81.GIF"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fe1fe88d.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.8d479b4b.chunk.js",
+    "static/css/main.a1c3f5af.chunk.css",
+    "static/js/main.1fbc92d9.chunk.js"
+  ]
+}
