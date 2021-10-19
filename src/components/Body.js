@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import './Body.css';
 import Home from './Home'
 import About from './About'
-import Contact from './Contact'
+import ContactEmail from './ContactEmail'
 import Navbar from './Navbar'
 import Products from './Products'
 
@@ -19,11 +19,10 @@ class Body extends Component {
                         <Route exact path="/" component={Home}></Route>
                         <Route exact path="/home" component={Home}></Route>
                         <Route exact path="/aboutUs" component={About}></Route>
-                        <Route exact path="/contactUs" component={Contact}></Route>
+                        <Route exact path="/contactUs" component={ContactEmail}></Route>
                         <Route exact path="/services" component={Products}></Route>
-                        <Route exact path="/">
-                            <Redirect to="/home" />
-                        </Route>
+                        <Redirect to="/home" />
+
                     </Switch>
                 </div>
             </>
