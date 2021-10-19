@@ -28,7 +28,7 @@ class ContactEmail extends Component {
             contact: this.state.email,
             query: this.state.query
         }
-        emailjs.send('service_erba51m', 'tq', templateParams, 'user_o8d4kOT06ByD2WS3U2OI7')
+        emailjs.send('service_erba51m', 'template_0c80u7q', templateParams, 'user_o8d4kOT06ByD2WS3U2OI7')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 this.setState({mailResponse:true, mailSendResponse: "Thanks for your enquiry.We will get back to you soon." , name:"",email:"",company:"",query:""})
