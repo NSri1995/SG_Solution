@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/SG_Solution/static/css/main.48f79f1f.chunk.css",
-    "main.js": "/SG_Solution/static/js/main.9a234c91.chunk.js",
-    "main.js.map": "/SG_Solution/static/js/main.9a234c91.chunk.js.map",
+    "main.css": "/SG_Solution/static/css/main.fce496c8.chunk.css",
+    "main.js": "/SG_Solution/static/js/main.6ef5badb.chunk.js",
+    "main.js.map": "/SG_Solution/static/js/main.6ef5badb.chunk.js.map",
     "runtime-main.js": "/SG_Solution/static/js/runtime-main.a19e28fa.js",
     "runtime-main.js.map": "/SG_Solution/static/js/runtime-main.a19e28fa.js.map",
     "static/css/2.b02d2c72.chunk.css": "/SG_Solution/static/css/2.b02d2c72.chunk.css",
-    "static/js/2.101cb3d6.chunk.js": "/SG_Solution/static/js/2.101cb3d6.chunk.js",
-    "static/js/2.101cb3d6.chunk.js.map": "/SG_Solution/static/js/2.101cb3d6.chunk.js.map",
+    "static/js/2.5ce711b1.chunk.js": "/SG_Solution/static/js/2.5ce711b1.chunk.js",
+    "static/js/2.5ce711b1.chunk.js.map": "/SG_Solution/static/js/2.5ce711b1.chunk.js.map",
     "static/js/3.513201c4.chunk.js": "/SG_Solution/static/js/3.513201c4.chunk.js",
     "static/js/3.513201c4.chunk.js.map": "/SG_Solution/static/js/3.513201c4.chunk.js.map",
     "index.html": "/SG_Solution/index.html",
     "static/css/2.b02d2c72.chunk.css.map": "/SG_Solution/static/css/2.b02d2c72.chunk.css.map",
-    "static/css/main.48f79f1f.chunk.css.map": "/SG_Solution/static/css/main.48f79f1f.chunk.css.map",
-    "static/js/2.101cb3d6.chunk.js.LICENSE.txt": "/SG_Solution/static/js/2.101cb3d6.chunk.js.LICENSE.txt",
-    "static/media/Body.css": "/SG_Solution/static/media/paper.40dc2e81.GIF"
+    "static/css/main.fce496c8.chunk.css.map": "/SG_Solution/static/css/main.fce496c8.chunk.css.map",
+    "static/js/2.5ce711b1.chunk.js.LICENSE.txt": "/SG_Solution/static/js/2.5ce711b1.chunk.js.LICENSE.txt",
+    "static/media/Body.css": "/SG_Solution/static/media/backImg.8b519577.jpg",
+    "static/media/digitalWorld.80d02e77.jpg": "/SG_Solution/static/media/digitalWorld.80d02e77.jpg",
+    "static/media/homeImg.511fe0f0.jpg": "/SG_Solution/static/media/homeImg.511fe0f0.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a19e28fa.js",
     "static/css/2.b02d2c72.chunk.css",
-    "static/js/2.101cb3d6.chunk.js",
-    "static/css/main.48f79f1f.chunk.css",
-    "static/js/main.9a234c91.chunk.js"
+    "static/js/2.5ce711b1.chunk.js",
+    "static/css/main.fce496c8.chunk.css",
+    "static/js/main.6ef5badb.chunk.js"
   ]
 }
