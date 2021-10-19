@@ -22,7 +22,6 @@ class Body extends Component {
                         <Route exact path="/contactUs" component={ContactEmail}></Route>
                         <Route exact path="/services" component={Products}></Route>
                         <Redirect to="/home" />
-
                     </Switch>
                 </div>
             </>
