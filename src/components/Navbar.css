@@ -1,6 +1,6 @@
 .menu_active{
     font-weight: bold;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white
 
 }
 .homeText{
@@ -17,18 +17,18 @@
   text-align: center;
   cursor: pointer;
   outline: none;
-  color:#0d6efd;
+  color:#091C30;
   background-color: whitesmoke;
-  border: 1px solid #0d6efd;
+  border: 1px solid #091C30;
   border-radius: 25px;
   box-shadow: 0 2px #999;
   font-weight: 200;
 }
 
-.btn-get-started:hover {background-color: #0d6efd;color:whitesmoke;}
+.btn-get-started:hover {background-color: #091C30;color:whitesmoke;}
 
 .btn-get-started:active {
-  background-color: #0d6efd;
+  background-color: #091C30;
   color:whitesmoke;
   box-shadow: 0 2px #999;
   transform: translateY(4px);

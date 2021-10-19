@@ -1,11 +1,15 @@
 .header{
     text-align: center;
+    background-color: #091C30;
+    color: white;
   }
   .titleHead{
     font-size:xx-large;
     font-weight:bolder;
+    color: white;
   }
   .titleTail{
    text-decoration: overline;
    font-size: larger;
+   color: white;
   }

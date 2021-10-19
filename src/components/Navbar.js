@@ -4,7 +4,7 @@ import './Navbar.css';
 
 function Navbar(props) {
     return (
-        <div>
+        <div style={{backgroundColor:"#091C30"}}>
             <div className="container-fluid nav_bg">
                 <div className="row">
                     <div className="col-10 max-auto" >
@@ -15,20 +15,20 @@ function Navbar(props) {
                                     <span className="navbar-toggler-icon"></span>
                                 </button>
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
+                                    <ul className="navbar-nav mr-auto mb-2 mb-lg-0" >
                                         <li className="nav-item">
-                                            <NavLink activeClassName="menu_active" className="nav-link active" aria-current="page" to="/home">Home</NavLink>
+                                            <NavLink style={{color:"white"}} activeClassName="menu_active" className="nav-link active" aria-current="page" to="/home">Home</NavLink>
                                         </li>
                                         <li className="nav-item">
-                                            <NavLink activeClassName="menu_active" className="nav-link active" to="/aboutUs">About</NavLink>
+                                            <NavLink style={{color:"white"}} activeClassName="menu_active" className="nav-link active" to="/aboutUs">About</NavLink>
                                         </li>
                                         <li className="nav-item">
-                                            <NavLink activeClassName="menu_active" className="nav-link active" to="/services">Services</NavLink>
+                                            <NavLink style={{color:"white"}} activeClassName="menu_active" className="nav-link active" to="/services">Services</NavLink>
                                         </li>
 
 
                                         <li className="nav-item">
-                                            <NavLink activeClassName="menu_active" className="nav-link active" to="/contactUs">Contact</NavLink>
+                                            <NavLink style={{color:"white"}} activeClassName="menu_active" className="nav-link active" to="/contactUs">Contact</NavLink>
                                         </li>
 
                                     </ul>

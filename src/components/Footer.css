@@ -1,13 +1,13 @@
 .footerText{
    padding-top: 20px;
    text-align: center;
+   background: #091C30;
 }
 .addText{
-   color: red;
+   color:white;
    padding-top: 20px;
 }
 .socialText{
-   text-decoration: underline;
    font-size: larger;
-   color: red;
+   color: white;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
+import web from './images/homeImg.jpg'
 function Home(props) {
     return (
         <div className="homeText">
@@ -20,7 +21,7 @@ function Home(props) {
                                     </div>
                                 </div>
                                 <div className="col-lg-6 order-1 order-lg-2 header-img">
-                                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&w=350&q=80" alt="home img" />
+                                    <img style={{width:"450px",paddingTop:"35px",height:"400px"}} src={web} alt="home img" />
                                 </div>
                             </div>
                         </div>

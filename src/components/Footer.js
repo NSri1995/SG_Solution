@@ -12,8 +12,9 @@ function Footer(props) {
                 <SocialIcon style={{ height: '30px' }} url={FbLinkLink} />
                 {/* //<SocialIcon style={{ height: '30px' }} url= {mail}/> */}
             </div>
-            <div className="addText"><span className="socialText"> Address : </span> Sector 15, Noida, UP- 110096</div>
-            <div style={{paddingTop:"20px", paddingBottom:"20px",textDecoration: "overline"}}>
+            <div className="addText"><span className="socialText"> Address : </span> Sector 15, Noida, UP- 201301
+            </div>
+            <div style={{ paddingTop: "20px", color:"white", paddingBottom: "20px", textDecoration: "overline" }}>
                 Copyright © 2021 SG Solitions, All rights reserved.
 
             </div>
