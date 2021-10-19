@@ -9,18 +9,19 @@ function EmailModal(props) {
 
     //const onOpenModal = () => setOpen(props.mailSend);
     const onCloseModal = () => setOpen(false);
+    const mailSendClassName = props.mailSendResponse && props.mailSendResponse.includes("wrong") ? "text-danger" : "text-success";
 
     return (
         <div>
             <Modal open={open} closeOnOverlayClick={true} onClose={onCloseModal} center>
-                {props.mailResponse ? <h4 style={{ paddingTop: "20px" }} className="text-success">{props.mailSendResponse}</h4> :
+                {props.mailResponse ? <h6 style={{ paddingTop: "20px" }} className={mailSendClassName}>{props.mailSendResponse}</h6> :
                     <div style={{textAlign:"center"}}>
                         <Spinner animation="grow" variant="primary" />
                         <Spinner animation="grow" variant="secondary" />
                         <Spinner animation="grow" variant="success" />
                         <Spinner animation="grow" variant="danger" />
                         <Spinner animation="grow" variant="warning" />
-                        <h4 style={{ paddingTop: "20px" }}> Sending your query.Please wait...</h4>
+                        <h6 style={{ paddingTop: "20px" }}> Sending your query.Please wait...</h6>
                     </div>}
             </Modal>
         </div>
