@@ -14,7 +14,8 @@ class ContactEmail extends Component {
         query: "",
         mailSendResponse: "",
         mailSend:false,
-        mailResponse:false
+        mailResponse:false,
+        //isNameValid:true
     }
 
     sendMail = (e) => {
@@ -27,18 +28,19 @@ class ContactEmail extends Component {
             contact: this.state.email,
             query: this.state.query
         }
-        emailjs.send('service_erba51m', 'template_0c80u7q', templateParams, 'user_o8d4kOT06ByD2WS3U2OI7')
+        emailjs.send('service_erba51m', 'tq', templateParams, 'user_o8d4kOT06ByD2WS3U2OI7')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 this.setState({mailResponse:true, mailSendResponse: "Thanks for your enquiry.We will get back to you soon." , name:"",email:"",company:"",query:""})
             })
             .catch((error) => {
                 console.log('FAILED...', error);
-                this.setState({ mailResponse:true,mailSendResponse: "Sorry! your query coulddn't be send",name:"",email:"",company:"",query:"" })
+                this.setState({ mailResponse:true,mailSendResponse: "Something went wrong! Please try later",name:"",email:"",company:"",query:"" })
             })
     }
     render() {
         //const mailSendClassName = this.state.mailSendResponse && this.state.mailSendResponse.includes("Sorry!") ? "text-danger" : "text-success";
+        //onst regex = /^\d+(\.\d{1,2})\\?$/;
         return (
             <div className="contactText">
 
@@ -50,9 +52,11 @@ class ContactEmail extends Component {
                                 <label htmlFor="username">Your Name</label>
                                 <InputText id="name" type="text" tooltip="Please enter your name"
                                     value={this.state.name}
-                                    validateOnly={true}
+                                    // validateOnly={true}
+                                    // keyfilter={regex} onInput={(e, isNameValid) => this.setState({ isNameValid })}
                                     onChange={(e) => this.setState({ name: e.target.value })}
                                 />
+                                {/* //{!this.state.isNameValid && <span className="text-danger">Value is invalid</span>} */}
                             </div>
                             <div className="p-field">
                                 <label >Company Name</label>
