@@ -3,8 +3,9 @@ import { Divider } from 'primereact/divider';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
-import emailjs from 'emailjs-com'
-import EmailModal from './EmailModal'
+import emailjs from 'emailjs-com';
+import EmailModal from './EmailModal';
+import { IoIosMail,IoMdCall } from "react-icons/io";
 
 class ContactEmail extends Component {
     state = {
@@ -85,15 +86,15 @@ class ContactEmail extends Component {
                         </form>
                     </div>
                     <div className="p-col-2">
-                        <Divider layout="vertical">
-                            <strong>OR</strong>
+                        <Divider layout="vertical" >
+                            {/* <strong>OR</strong> */}
                         </Divider>
                     </div>
                     <div className="p-col-5 p-d-flex p-ai-center p-jc-center">
                         <div className="p-field" >
                             <span style={{ textDecoration: "overline", fontSize: "xx-large" }} >For Support </span> <br /><br />
-                            <span style={{ color: "red", fontSize: "large" }}><b><u> Call : </u></b>&nbsp;&nbsp;+91-7678334260</span><br />
-                            <span style={{ color: "red", fontSize: "large" }}><b><u> Mail :</u></b>&nbsp; &nbsp; nrjsrivastav100@yahoo.com</span>
+                            <span style={{ color: "red", fontSize: "large" }}><IoIosMail/>&nbsp; nrjsrivastav100@yahoo.com</span><br />
+                            <span style={{ color: "red", fontSize: "large" }}> <IoMdCall/>&nbsp; +91-7678334260</span>
                         </div>
                     </div>
                 </div>

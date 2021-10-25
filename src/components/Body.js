@@ -8,6 +8,9 @@ import About from './About'
 import ContactEmail from './ContactEmail'
 import Navbar from './Navbar'
 import Products from './Products'
+import DigitalMarketing from './DigitalMarketing';
+import SEOServices from './SEOServices';
+import WebsiteServices from './WebsiteServices';
 
 class Body extends Component {
     render() {
@@ -21,6 +24,9 @@ class Body extends Component {
                         <Route exact path="/aboutUs" component={About}></Route>
                         <Route exact path="/contactUs" component={ContactEmail}></Route>
                         <Route exact path="/services" component={Products}></Route>
+                        <Route exact path="/websitServices" component={WebsiteServices}></Route>
+                        <Route exact path="/digitalServices" component={DigitalMarketing}></Route>
+                        <Route exact path="/seoServies" component={SEOServices}></Route>
                         <Redirect to="/home" />
                     </Switch>
                 </div>
