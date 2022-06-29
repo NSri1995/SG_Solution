@@ -1,0 +1,115 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: __deploymentName__
+  namespace: __namespace__
+  labels:
+    product: athena
+    tags.datadoghq.com/env: __env__
+    tags.datadoghq.com/service: __deploymentName__
+    tags.datadoghq.com/version: __version__
+spec:
+  replicas: __replicaCount__            # no of replicas
+  selector:
+    matchLabels:
+      app: __deploymentName__
+  template:
+    metadata:
+      name: app                        # NEW
+      labels:
+        app: __deploymentName__
+        tags.datadoghq.com/env: __env__
+        tags.datadoghq.com/service: __deploymentName__
+        tags.datadoghq.com/version: __version__
+      annotations:
+        # container name
+        ad.datadoghq.com/__deploymentName__.check_names: '["prometheus"]'
+        ad.datadoghq.com/__deploymentName__.init_configs: '[{}]'
+        ad.datadoghq.com/__deploymentName__.instances: |
+          [
+            {
+              "prometheus_url": "http://%%host%%:8080/actuator/prometheus",
+              "namespace": __deploymentName__,
+              "metrics": ["*"],
+              "health_service_check": true,
+              "max_returned_metrics": 2000
+            }
+          ]
+        prometheus.io/port: "8080"
+        prometheus.io/scrape: "true"
+        vault.security.banzaicloud.io/vault-addr: "https://vault.maersk-digital.net"
+        vault.security.banzaicloud.io/vault-skip-verify: "true"
+        # This value will typically match the name of the namespace
+        # where the deployment will run in.
+        vault.security.banzaicloud.io/vault-role: __namespace__
+    spec:
+      serviceAccountName: default
+      imagePullSecrets:
+        - name: __acr-secret__
+      containers:
+        - name: __deploymentName__
+          image: __acr__.azurecr.io/wnd-bulk-loader:__imageTag__
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources:
+            requests:
+              cpu: __requestCPU__
+              memory: __requestMemory__
+            limits:
+              cpu: __limitCPU__
+              memory: __limitMemory__
+          env:
+            - name: JAVA_OPTS
+              value: __JAVA_OPTS__
+            - name: DD_GLOBAL_TAG
+              value: __DD_GLOBAL_TAG__
+            - name: ADDITIONAL_DATA_DOG_ARGS
+              value: __ADDITIONAL_DATA_DOG_ARGS__
+            - name: DD_ENV
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/env']
+            - name: DD_SERVICE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/service']
+            - name: DD_VERSION
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/version']
+            - name: DD_PROFILING_ENABLED
+              value: __DD_PROFILING_ENABLED__
+            - name: DD_PROFILING_ALLOCATION_ENABLED
+              value: __DD_PROFILING_ALLOCATION_ENABLED__
+            - name: DATADOG_ENDPOINT
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: DD_AGENT_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: deploymentName
+              value: __deploymentName__
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health/readiness
+            #            tcpSocket:
+            #              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            failureThreshold: 3
+            successThreshold: 1
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health/liveness
+            #            tcpSocket:
+            #              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 3
+            successThreshold: 1
