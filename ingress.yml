@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: __deploymentName__
+  namespace: __namespace__
+
+  labels:
+    website: __deploymentName__
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "PUT, GET, POST, DELETE, OPTIONS"
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "origin, x-requested-with, accept,X-APP-ID,X-API-KEY,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization"
+spec:
+  rules:
+    - host: __hostName__
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: __deploymentName__
+              servicePort: 8080
+  tls:
+    - hosts:
+        - __hostName__
+      secretName: tls-wildcard-maersk-digital-net
